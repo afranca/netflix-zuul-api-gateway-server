@@ -17,8 +17,9 @@ public class ZuulLoggingFilter extends ZuulFilter {
 
 	@Override
 	public boolean shouldFilter() {
-		// TODO Auto-generated method stub
-		return false;
+		boolean shouldFilter = true;
+		logger.info("shouldFilter -> {}", shouldFilter);  
+		return shouldFilter;
 	}
 
 	@Override
@@ -32,14 +33,16 @@ public class ZuulLoggingFilter extends ZuulFilter {
 
 	@Override
 	public String filterType() {
-		// TODO Auto-generated method stub
-		return null;
+		String filterType = "pre";
+		logger.info("filterType -> {}", filterType);  
+		return filterType;
 	}
 
 	@Override
 	public int filterOrder() {
-		// TODO Auto-generated method stub
-		return 0;
+		int  filterOrder = 1;
+		logger.info("filterOrder -> {}", filterOrder);  
+		return filterOrder;
 	}
 
 }
