@@ -18,7 +18,7 @@ public class ZuulLoggingFilter extends ZuulFilter {
 	@Override
 	public boolean shouldFilter() {
 		boolean shouldFilter = true;
-		logger.info("shouldFilter -> {}", shouldFilter);  
+		//logger.info("shouldFilter -> {}", shouldFilter);  
 		return shouldFilter;
 	}
 
@@ -27,21 +27,22 @@ public class ZuulLoggingFilter extends ZuulFilter {
 		//getting the current HTTP request that is to be handle  
 		HttpServletRequest request=RequestContext.getCurrentContext().getRequest();  
 		//prints the detail of the requestin the log  
-		logger.info("request -> {} request uri-> {}", request, request.getRequestURI());  
+		logger.info("request -> uri-> {}", request.getRequestURI()); 
+		//logger.info("request -> {} request uri-> {}", request, request.getRequestURI());  
 		return null;  
 	}
 
 	@Override
 	public String filterType() {
 		String filterType = "pre";
-		logger.info("filterType -> {}", filterType);  
+		//logger.info("filterType -> {}", filterType);  
 		return filterType;
 	}
 
 	@Override
 	public int filterOrder() {
 		int  filterOrder = 1;
-		logger.info("filterOrder -> {}", filterOrder);  
+		//logger.info("filterOrder -> {}", filterOrder);  
 		return filterOrder;
 	}
 
